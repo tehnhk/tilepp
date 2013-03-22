@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirixon/Programming/tilepp/drawer.h
+GL/glut.h
+-
+
+/home/kirixon/Programming/tilepp/main.cpp
+iostream
+-
+GL/glut.h
+-
+drawer.h
+/home/kirixon/Programming/tilepp/drawer.h
+
