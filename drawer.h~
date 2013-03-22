@@ -17,6 +17,7 @@ const int TH = 32; //Высота тайла
 class Drawer
 {
   void Init();
+  void Display();
 };
 
 #endif // DRAWER_H
