@@ -14,6 +14,7 @@ class Drawer
 {
 public:
   void Init(int argc,char **argv);
+  void SetGrid(bool grd);
 };
 
 #endif // DRAWER_H
