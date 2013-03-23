@@ -6,7 +6,7 @@ TODO: Чего-нибудь нарисовать
 
 #include "drawer.h"
 
-bool grid = false;
+bool grid = true;
 
 //Основные константы класса Drawer
 
@@ -58,7 +58,7 @@ void Drawer::Init(int argc,char **argv)
   glViewport(0,0,W,H);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  glOrtho(0,W,H,0,1.0,1.0);
+  glOrtho(0,W,H,0,0,1.0);
   glClearColor(0,0,0,0);
   glutDisplayFunc(Display);
   glutMainLoop();
