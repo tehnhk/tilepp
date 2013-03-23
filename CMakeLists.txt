@@ -19,10 +19,15 @@ set(SOURCE_LIB drawer.cpp)
 
 add_library(drawer STATIC ${SOURCE_LIB})
 
+set(SOURCE_LIB game.cpp)
+
+add_library(game STATIC ${SOURCE_LIB})
+
 add_executable(tilecpp main.cpp)
 
 target_link_libraries(tilecpp
                       drawer
+                      game
 		      ${OPENGL_LIBRARIES}
 		      ${GLUT_LIBRARY})
 
