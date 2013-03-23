@@ -18,7 +18,6 @@ class Drawer
 {
 public:
   void Init(int argc,char **argv);
-  void Display();
 };
 
 #endif // DRAWER_H

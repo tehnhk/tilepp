@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/tilecpp.dir/main.o"
+  "CMakeFiles/tilecpp.dir/main.cpp.o"
   "tilecpp.pdb"
   "tilecpp"
 )

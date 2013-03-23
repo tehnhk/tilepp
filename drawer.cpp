@@ -8,7 +8,7 @@ TODO: Чего-нибудь нарисовать
 
 //Основная прорисовочная функция
 
-void Drawer::Display()
+void Display()
 {
   glClear(GL_COLOR_BUFFER_BIT);
   glFlush();
@@ -24,7 +24,7 @@ void Drawer::Init(int argc,char **argv)
   glutInitWindowPosition(200,200);
   glutInitDisplayMode(GLUT_RGB);
   glutCreateWindow("TileCPP");
-  glutDisplayFunc(Drawer::Display);
+  glutDisplayFunc(Display);
   glutMainLoop();
 }
 

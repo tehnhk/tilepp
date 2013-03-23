@@ -49,38 +49,48 @@ include CMakeFiles/tilecpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tilecpp.dir/flags.make
 
-CMakeFiles/tilecpp.dir/main.o: CMakeFiles/tilecpp.dir/flags.make
-CMakeFiles/tilecpp.dir/main.o: ../main.cpp
+CMakeFiles/tilecpp.dir/main.cpp.o: CMakeFiles/tilecpp.dir/flags.make
+CMakeFiles/tilecpp.dir/main.cpp.o: ../main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/kirixon/Programming/tilepp/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tilecpp.dir/main.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tilecpp.dir/main.o -c /home/kirixon/Programming/tilepp/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tilecpp.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tilecpp.dir/main.cpp.o -c /home/kirixon/Programming/tilepp/main.cpp
 
-CMakeFiles/tilecpp.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tilecpp.dir/main.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kirixon/Programming/tilepp/main.cpp > CMakeFiles/tilecpp.dir/main.i
+CMakeFiles/tilecpp.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tilecpp.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kirixon/Programming/tilepp/main.cpp > CMakeFiles/tilecpp.dir/main.cpp.i
 
-CMakeFiles/tilecpp.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tilecpp.dir/main.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kirixon/Programming/tilepp/main.cpp -o CMakeFiles/tilecpp.dir/main.s
+CMakeFiles/tilecpp.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tilecpp.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kirixon/Programming/tilepp/main.cpp -o CMakeFiles/tilecpp.dir/main.cpp.s
 
-CMakeFiles/tilecpp.dir/main.o.requires:
-.PHONY : CMakeFiles/tilecpp.dir/main.o.requires
+CMakeFiles/tilecpp.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/tilecpp.dir/main.cpp.o.requires
 
-CMakeFiles/tilecpp.dir/main.o.provides: CMakeFiles/tilecpp.dir/main.o.requires
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.o.provides.build
-.PHONY : CMakeFiles/tilecpp.dir/main.o.provides
+CMakeFiles/tilecpp.dir/main.cpp.o.provides: CMakeFiles/tilecpp.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/tilecpp.dir/main.cpp.o.provides
 
-CMakeFiles/tilecpp.dir/main.o.provides.build: CMakeFiles/tilecpp.dir/main.o
+CMakeFiles/tilecpp.dir/main.cpp.o.provides.build: CMakeFiles/tilecpp.dir/main.cpp.o
 
 # Object files for target tilecpp
 tilecpp_OBJECTS = \
-"CMakeFiles/tilecpp.dir/main.o"
+"CMakeFiles/tilecpp.dir/main.cpp.o"
 
 # External object files for target tilecpp
 tilecpp_EXTERNAL_OBJECTS =
 
-tilecpp: CMakeFiles/tilecpp.dir/main.o
+tilecpp: CMakeFiles/tilecpp.dir/main.cpp.o
 tilecpp: CMakeFiles/tilecpp.dir/build.make
+tilecpp: libdrawer.a
+tilecpp: /usr/lib/x86_64-linux-gnu/libGLU.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libGL.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libSM.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libICE.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libX11.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libXext.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libglut.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libXmu.so
+tilecpp: /usr/lib/x86_64-linux-gnu/libXi.so
 tilecpp: CMakeFiles/tilecpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable tilecpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tilecpp.dir/link.txt --verbose=$(VERBOSE)
@@ -89,7 +99,7 @@ tilecpp: CMakeFiles/tilecpp.dir/link.txt
 CMakeFiles/tilecpp.dir/build: tilecpp
 .PHONY : CMakeFiles/tilecpp.dir/build
 
-CMakeFiles/tilecpp.dir/requires: CMakeFiles/tilecpp.dir/main.o.requires
+CMakeFiles/tilecpp.dir/requires: CMakeFiles/tilecpp.dir/main.cpp.o.requires
 .PHONY : CMakeFiles/tilecpp.dir/requires
 
 CMakeFiles/tilecpp.dir/clean:

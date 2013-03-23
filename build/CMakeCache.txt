@@ -166,10 +166,10 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 GLUT_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
-GLUT_Xi_LIBRARY:FILEPATH=GLUT_Xi_LIBRARY-NOTFOUND
+GLUT_Xi_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
 
 //Path to a library.
-GLUT_Xmu_LIBRARY:FILEPATH=GLUT_Xmu_LIBRARY-NOTFOUND
+GLUT_Xmu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
 
 //Path to a library.
 GLUT_glut_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libglut.so
@@ -277,10 +277,10 @@ X11_Xft_INCLUDE_PATH:PATH=X11_Xft_INCLUDE_PATH-NOTFOUND
 X11_Xft_LIB:FILEPATH=X11_Xft_LIB-NOTFOUND
 
 //Path to a file.
-X11_Xi_INCLUDE_PATH:PATH=X11_Xi_INCLUDE_PATH-NOTFOUND
+X11_Xi_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xi_LIB:FILEPATH=X11_Xi_LIB-NOTFOUND
+X11_Xi_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
 
 //Path to a file.
 X11_Xinerama_INCLUDE_PATH:PATH=X11_Xinerama_INCLUDE_PATH-NOTFOUND
@@ -289,10 +289,10 @@ X11_Xinerama_INCLUDE_PATH:PATH=X11_Xinerama_INCLUDE_PATH-NOTFOUND
 X11_Xinerama_LIB:FILEPATH=X11_Xinerama_LIB-NOTFOUND
 
 //Path to a file.
-X11_Xinput_INCLUDE_PATH:PATH=X11_Xinput_INCLUDE_PATH-NOTFOUND
+X11_Xinput_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xinput_LIB:FILEPATH=X11_Xinput_LIB-NOTFOUND
+X11_Xinput_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
 
 //Path to a file.
 X11_Xkb_INCLUDE_PATH:PATH=/usr/include
@@ -310,10 +310,10 @@ X11_Xkblib_INCLUDE_PATH:PATH=/usr/include
 X11_Xlib_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
-X11_Xmu_INCLUDE_PATH:PATH=X11_Xmu_INCLUDE_PATH-NOTFOUND
+X11_Xmu_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
-X11_Xmu_LIB:FILEPATH=X11_Xmu_LIB-NOTFOUND
+X11_Xmu_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
 
 //Path to a file.
 X11_Xpm_INCLUDE_PATH:PATH=X11_Xpm_INCLUDE_PATH-NOTFOUND
@@ -371,6 +371,12 @@ X11_xf86misc_INCLUDE_PATH:PATH=X11_xf86misc_INCLUDE_PATH-NOTFOUND
 
 //Path to a file.
 X11_xf86vmode_INCLUDE_PATH:PATH=/usr/include
+
+//Dependencies for target
+drawer_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+header_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 tilecpp_BINARY_DIR:STATIC=/home/kirixon/Programming/tilepp/build
@@ -519,7 +525,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libglut.so
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libGL.so][v()]
 //Details about finding X11
-FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/lib/x86_64-linux-gnu/libX11.so][/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include]
+FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/lib/x86_64-linux-gnu/libX11.so][/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include]
 //ADVANCED property for variable: GLUT_INCLUDE_DIR
 GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_Xi_LIBRARY

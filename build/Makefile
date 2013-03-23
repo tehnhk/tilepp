@@ -140,6 +140,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named drawer
+
+# Build rule for target.
+drawer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drawer
+.PHONY : drawer
+
+# fast build rule for target.
+drawer/fast:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/build
+.PHONY : drawer/fast
+
+#=============================================================================
 # Target rules for targets named tilecpp
 
 # Build rule for target.
@@ -152,20 +165,53 @@ tilecpp/fast:
 	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/build
 .PHONY : tilecpp/fast
 
+drawer.o: drawer.cpp.o
+.PHONY : drawer.o
+
 # target to build an object file
-main.o:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.o
-.PHONY : main.o
+drawer.cpp.o:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.o
+.PHONY : drawer.cpp.o
+
+drawer.i: drawer.cpp.i
+.PHONY : drawer.i
 
 # target to preprocess a source file
-main.i:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.i
-.PHONY : main.i
+drawer.cpp.i:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.i
+.PHONY : drawer.cpp.i
+
+drawer.s: drawer.cpp.s
+.PHONY : drawer.s
 
 # target to generate assembly for a file
-main.s:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.s
+drawer.cpp.s:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.s
+.PHONY : drawer.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
 .PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -173,6 +219,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... drawer"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -180,6 +227,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... tilecpp"
+	@echo "... drawer.o"
+	@echo "... drawer.i"
+	@echo "... drawer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
