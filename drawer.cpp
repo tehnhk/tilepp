@@ -21,7 +21,7 @@ void Display()
     glVertex2f((i*20)+20,i*20);
     glEnd();
   }
-  glFlush();
+  glutSwapBuffers();
 }
 
 
@@ -32,8 +32,10 @@ void Drawer::Init(int argc,char **argv)
   glutInit(&argc,argv);
   glutInitWindowSize(W,H);
   glutInitWindowPosition(200,200);
-  glutInitDisplayMode(GLUT_RGB);
-  glOrtho(0.0,800.0,600.0,0.0,1.0,1.0);
+  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+  glOrtho(0,800,600,0,-1.0,1.0);
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
   glutCreateWindow("Tile++");
   glutDisplayFunc(Display);
   glutMainLoop();
