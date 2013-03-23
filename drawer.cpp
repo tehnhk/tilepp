@@ -6,14 +6,12 @@ TODO: Чего-нибудь нарисовать
 
 #include "drawer.h"
 
-//Основная прорисовочная функция
-
-void Display()
+//Сетка
+void DrawGrid()
 {
-  glClear(GL_COLOR_BUFFER_BIT);
-  for (int i=0;i<25;i++)    //Начинаем рисовать чушь
+  for (int i=0;i<25;i++)
   {
-    glColor3f(0.5,0.5,0.5); // цвет
+    glColor3f(0.5,0.5,0.5);
     glBegin(GL_LINES);
     glVertex2f(i*TW,0);
     glVertex2f(i*TW,H);
@@ -23,6 +21,14 @@ void Display()
     glVertex2f(W,i*TH);
     glEnd();
   }
+}
+
+//Основная прорисовочная функция
+
+void Display()
+{
+  glClear(GL_COLOR_BUFFER_BIT);
+  DrawGrid();
   glutSwapBuffers();
   glFlush();
 }
