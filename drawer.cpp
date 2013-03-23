@@ -18,9 +18,8 @@ const int TH = 32; //Высота тайла
 //Сетка
 void DrawGrid()
 {
-  if(grid)
-  {
-    for (int i=0;i<25;i++)
+  if(grid){
+  for (int i=0;i<25;i++)
     {
       glColor3f(0.5,0.5,0.5);
       glBegin(GL_LINES);
