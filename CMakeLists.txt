@@ -26,6 +26,9 @@ add_library(drawer STATIC ${SOURCE_LIB})
 
 add_executable(tilecpp main.cpp)
 
-target_link_libraries(tilecpp drawer ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+target_link_libraries(tilecpp
+                      drawer
+		      ${OPENGL_LIBRARIES}
+		      ${GLUT_LIBRARY})
 
 install(TARGETS tilecpp RUNTIME DESTINATION bin)
