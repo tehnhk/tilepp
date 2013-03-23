@@ -6,23 +6,34 @@ TODO: Чего-нибудь нарисовать
 
 #include "drawer.h"
 
+bool grid = false;
+
+//Сетка
+void DrawGrid()
+{
+  if(grid)
+  {
+    for (int i=0;i<25;i++)
+    {
+      glColor3f(0.5,0.5,0.5);
+      glBegin(GL_LINES);
+      glVertex2f(i*TW,0);
+      glVertex2f(i*TW,H);
+      glEnd();
+      glBegin(GL_LINES);
+      glVertex2f(0,i*TH);
+      glVertex2f(W,i*TH);
+      glEnd();
+    }
+  }
+}
+
 //Основная прорисовочная функция
 
 void Display()
 {
   glClear(GL_COLOR_BUFFER_BIT);
-  for (int i=0;i<25;i++)    //Начинаем рисовать чушь
-  {
-    glColor3f(0.5,0.5,0.5); // цвет
-    glBegin(GL_LINES);
-    glVertex2f(i*TW,0);
-    glVertex2f(i*TW,H);
-    glEnd();
-    glBegin(GL_LINES);
-    glVertex2f(0,i*TH);
-    glVertex2f(W,i*TH);
-    glEnd();
-  }
+  DrawGrid();
   glutSwapBuffers();
   glFlush();
 }
