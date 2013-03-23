@@ -3,12 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 project(tilecpp)
 
 find_package(OpenGL REQUIRED)
-if(NOT OpenGL_FOUND)
-  message("OpenGL not found!")
-  return()
-else()
-  include_directories(${OpenGL_INCLUDE_DIR})
-endif()
+include_directories(${OpenGL_INCLUDE_DIR})
 
 find_package(GLUT REQUIRED)
 if(NOT GLUT_FOUND)

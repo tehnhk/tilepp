@@ -53,6 +53,76 @@ CMAKE_SOURCE_DIR = /home/kirixon/Programming/tilepp
 CMAKE_BINARY_DIR = /home/kirixon/Programming/tilepp/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/drawer.dir
+
+# All Build rule for target.
+CMakeFiles/drawer.dir/all:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/depend
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kirixon/Programming/tilepp/build/CMakeFiles  1
+	@echo "Built target drawer"
+.PHONY : CMakeFiles/drawer.dir/all
+
+# Include target in all.
+all: CMakeFiles/drawer.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/drawer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirixon/Programming/tilepp/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/drawer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirixon/Programming/tilepp/build/CMakeFiles 0
+.PHONY : CMakeFiles/drawer.dir/rule
+
+# Convenience name for target.
+drawer: CMakeFiles/drawer.dir/rule
+.PHONY : drawer
+
+# clean rule for target.
+CMakeFiles/drawer.dir/clean:
+	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/clean
+.PHONY : CMakeFiles/drawer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/drawer.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tilecpp.dir
+
+# All Build rule for target.
+CMakeFiles/tilecpp.dir/all: CMakeFiles/drawer.dir/all
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/depend
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kirixon/Programming/tilepp/build/CMakeFiles  2
+	@echo "Built target tilecpp"
+.PHONY : CMakeFiles/tilecpp.dir/all
+
+# Include target in all.
+all: CMakeFiles/tilecpp.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tilecpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirixon/Programming/tilepp/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tilecpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirixon/Programming/tilepp/build/CMakeFiles 0
+.PHONY : CMakeFiles/tilecpp.dir/rule
+
+# Convenience name for target.
+tilecpp: CMakeFiles/tilecpp.dir/rule
+.PHONY : tilecpp
+
+# clean rule for target.
+CMakeFiles/tilecpp.dir/clean:
+	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/clean
+.PHONY : CMakeFiles/tilecpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/tilecpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
