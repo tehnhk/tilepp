@@ -3,7 +3,21 @@ cmake_minimum_required(VERSION 2.8)
 project(tilecpp)
 
 find_package(OpenGL REQUIRED)
+if(NOT OpenGL_FOUND)
+  message("OpenGL not found!")
+  return()
+else()
+  include_directories(${OpenGL_INCLUDE_DIR})
+endif()
+
 find_package(GLUT REQUIRED)
+if(NOT GLUT_FOUND)
+  message("glut not found!")
+  return()
+else()
+  include_directories(${GLUT_INCLUDE_DIR})
+endif()
+
 include_directories(${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS})
 
 set(SOURCE_LIB drawer.cpp)
