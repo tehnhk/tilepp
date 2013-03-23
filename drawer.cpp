@@ -11,14 +11,16 @@ TODO: Чего-нибудь нарисовать
 void Display()
 {
   glClear(GL_COLOR_BUFFER_BIT);
-  for (int i=0;i<19;i++)    //Начинаем рисовать чушь
+  for (int i=0;i<25;i++)    //Начинаем рисовать чушь
   {
-    glColor3f(1,0.5,0.5); //Серый цвет
-    glBegin(GL_QUADS);
-    glVertex2f(i*TW,i*TH);
-    glVertex2f(i*TW,(i*TH)+TH);
-    glVertex2f((i*TW)+TW,(i*TH)+TH);
-    glVertex2f((i*TW)+TW,i*TH);
+    glColor3f(0.5,0.5,0.5); // цвет
+    glBegin(GL_LINES);
+    glVertex2f(i*TW,0);
+    glVertex2f(i*TW,H);
+    glEnd();
+    glBegin(GL_LINES);
+    glVertex2f(0,i*TH);
+    glVertex2f(W,i*TH);
     glEnd();
   }
   glutSwapBuffers();
