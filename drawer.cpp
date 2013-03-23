@@ -58,8 +58,7 @@ void Drawer::Init(int argc,char **argv)
   glViewport(0,0,W,H);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluOrtho2D(0,W,H,0);
-  //glOrtho(0,W,H,0);
+  glOrtho(0,W,H,0,1.0,1.0);
   glClearColor(0,0,0,0);
   glutDisplayFunc(Display);
   glutMainLoop();
