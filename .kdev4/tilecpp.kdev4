@@ -29,3 +29,6 @@ Configured from ProjectItem=tilecpp,tilecpp
 Project Target=tilecpp,tilecpp
 Working Directory=file:///home/kirixon/Programming/tilepp/build/
 isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit

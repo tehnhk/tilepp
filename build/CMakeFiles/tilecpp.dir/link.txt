@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/tilecpp.dir/main.cpp.o  -o tilecpp -rdynamic libdrawer.a -lGLU -lGL -lSM -lICE -lX11 -lXext -lglut -lXmu -lXi 

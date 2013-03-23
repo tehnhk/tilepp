@@ -1,2 +1,0 @@
-/home/kirixon/Programming/tilepp/build/CMakeFiles/drawer.dir
-/home/kirixon/Programming/tilepp/build/CMakeFiles/tilecpp.dir

@@ -13,17 +13,19 @@ else()
   include_directories(${GLUT_INCLUDE_DIR})
 endif()
 
-include_directories(${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS})
+include_directories(${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} drawer)
 
-set(SOURCE_LIB drawer.cpp)
+#set(SOURCE_LIB drawer.cpp)
 
-add_library(drawer STATIC ${SOURCE_LIB})
+#add_library(drawer STATIC ${SOURCE_LIB})
 
 set(SOURCE_LIB game.cpp)
 
 add_library(game STATIC ${SOURCE_LIB})
 
 add_executable(tilecpp main.cpp)
+
+add_subdirectory(drawer)
 
 target_link_libraries(tilecpp
                       drawer

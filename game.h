@@ -1,7 +1,7 @@
 /*
 Класс игровой логики (или как это лучше там назвать)
 */
-#include "drawer.h"
+
 
 #ifndef DRAWER_H
 #define DRAWER_H
