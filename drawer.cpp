@@ -6,20 +6,25 @@ TODO: Чего-нибудь нарисовать
 
 #include "drawer.h"
 
+bool grid = false;
+
 //Сетка
 void DrawGrid()
 {
-  for (int i=0;i<25;i++)
+  if(grid)
   {
-    glColor3f(0.5,0.5,0.5);
-    glBegin(GL_LINES);
-    glVertex2f(i*TW,0);
-    glVertex2f(i*TW,H);
-    glEnd();
-    glBegin(GL_LINES);
-    glVertex2f(0,i*TH);
-    glVertex2f(W,i*TH);
-    glEnd();
+    for (int i=0;i<25;i++)
+    {
+      glColor3f(0.5,0.5,0.5);
+      glBegin(GL_LINES);
+      glVertex2f(i*TW,0);
+      glVertex2f(i*TW,H);
+      glEnd();
+      glBegin(GL_LINES);
+      glVertex2f(0,i*TH);
+      glVertex2f(W,i*TH);
+      glEnd();
+    }
   }
 }
 
