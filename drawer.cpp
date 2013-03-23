@@ -15,7 +15,7 @@ const int H = 600; //Высота экрана
 const int TW = 32; //Ширина тайла
 const int TH = 32; //Высота тайла
 
-void SetGrid(bool grd)
+void Drawer::SetGrid(bool grd)
 {
   grid = grd;
 }
