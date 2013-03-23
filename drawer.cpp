@@ -8,6 +8,13 @@ TODO: Чего-нибудь нарисовать
 
 bool grid = false;
 
+//Основные константы класса Drawer
+
+const int W = 800; //Ширина экрана
+const int H = 600; //Высота экрана
+const int TW = 32; //Ширина тайла
+const int TH = 32; //Высота тайла
+
 //Сетка
 void DrawGrid()
 {
@@ -52,6 +59,7 @@ void Drawer::Init(int argc,char **argv)
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
   gluOrtho2D(0,W,H,0);
+  //glOrtho(0,W,H,0);
   glClearColor(0,0,0,0);
   glutDisplayFunc(Display);
   glutMainLoop();
