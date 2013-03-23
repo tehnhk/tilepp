@@ -23,7 +23,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-2.8/Modules/FindGLUT.cmake"
   "/usr/share/cmake-2.8/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-2.8/Modules/FindPackageMessage.cmake"
@@ -48,6 +47,4 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/drawer.dir/DependInfo.cmake"
-  "CMakeFiles/tilecpp.dir/DependInfo.cmake"
   )

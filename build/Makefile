@@ -57,47 +57,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -139,100 +98,14 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named drawer
-
-# Build rule for target.
-drawer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drawer
-.PHONY : drawer
-
-# fast build rule for target.
-drawer/fast:
-	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/build
-.PHONY : drawer/fast
-
-#=============================================================================
-# Target rules for targets named tilecpp
-
-# Build rule for target.
-tilecpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tilecpp
-.PHONY : tilecpp
-
-# fast build rule for target.
-tilecpp/fast:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/build
-.PHONY : tilecpp/fast
-
-drawer.o: drawer.cpp.o
-.PHONY : drawer.o
-
-# target to build an object file
-drawer.cpp.o:
-	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.o
-.PHONY : drawer.cpp.o
-
-drawer.i: drawer.cpp.i
-.PHONY : drawer.i
-
-# target to preprocess a source file
-drawer.cpp.i:
-	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.i
-.PHONY : drawer.cpp.i
-
-drawer.s: drawer.cpp.s
-.PHONY : drawer.s
-
-# target to generate assembly for a file
-drawer.cpp.s:
-	$(MAKE) -f CMakeFiles/drawer.dir/build.make CMakeFiles/drawer.dir/drawer.cpp.s
-.PHONY : drawer.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/tilecpp.dir/build.make CMakeFiles/tilecpp.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... drawer"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... tilecpp"
-	@echo "... drawer.o"
-	@echo "... drawer.i"
-	@echo "... drawer.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

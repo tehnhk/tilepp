@@ -14,3 +14,18 @@ CMake Binary=file:///usr/bin/cmake
 Environment Profile=
 Extra Arguments=
 Install Directory=file:///usr/local
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=tilecpp
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Configured from ProjectItem=tilecpp,tilecpp
+Project Target=tilecpp,tilecpp
+Working Directory=file:///home/kirixon/Programming/tilepp/build/
+isExecutable=false
