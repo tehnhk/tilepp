@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirixon/projects/Tile%2B%2B/main.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+
